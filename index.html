@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+    
+    <form id="resume-form">
+      <input type="text" placeholder="Name" id="name" required />
+      <input type="email" placeholder="Email" id="email" required />
+      <input type="tel" placeholder="Phone Number" id="phone" required />
+      <textarea placeholder="Profile Summary" id="summary"></textarea>
+
+      <div id="education-section">
+        <label><u><b>Education</b></u></label>
+        <div class="dynamic-input">
+            <div class="edu-input-group">
+                <input type="text" placeholder="Degree" class="edu-input"/>
+                <input type="text" placeholder="CGPA/Percentage" class="edu-input"/>
+            </div>
+        </div>
+        <button type="button" onclick="addEducation()">+ Add Education</button>
+      </div>
+
+      <div id="experience-section">
+        <label><u><b>Experience</b></u></label>
+        <div class="dynamic-input">
+            <div class="exp-input-group">
+                <input type="text" placeholder="Job Title" class="exp-input"/>
+                <input type="text" placeholder="Company" class="exp-input"/>
+            </div>
+        </div>
+        <button type="button" onclick="addExperience()">+ Add Experience</button>
+      </div>
+
+      <label><u><b>Skills</b></u></label>
+      <div class="skills">
+        <label><input type="checkbox" value="C" /> C</label>
+        <label><input type="checkbox" value="Java" /> Java</label>
+        <label><input type="checkbox" value="MySQL" /> MySQL</label>
+        <label><input type="checkbox" value="HTML" /> HTML</label>
+        <label><input type="checkbox" value="CSS" /> CSS</label>
+        <label><input type="checkbox" value="JavaScript" /> JavaScript</label>
+        <label><input type="checkbox" value="React JS" /> React JS</label>
+      </div>
+
+      <progress id="form-progress" value="0" max="100"></progress>
+
+      <div class="buttons">
+        <button type="reset" onclick="clearForm()">Clear Form</button>
+        <button type="button" onclick="downloadResume()">Download Resume</button>
+      </div>
+    </form>
+
+    <div class="resume-preview" id="resume-preview">
+      <h2 id="p-name"></h2>
+      <p><strong>Email:</strong> <span id="p-email"></span></p>
+      <p><strong>Phone:</strong> <span id="p-phone"></span></p>
+      <p><strong>Summary:</strong> <span id="p-summary"></span></p>
+      <p><strong>Education:</strong></p>
+      <ul id="p-education"></ul>
+      <p><strong>Experience:</strong></p>
+      <ul id="p-experience"></ul>
+      <p><strong>Skills:</strong> <span id="p-skills"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #000000;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: rgb(250, 252, 252);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family:fantasy; 
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: #333;
+}
+
+input, textarea, button {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea{
+    padding: 30px;
+}
+input:focus, textarea:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  background-color: #000000;
+  color: white;
+  cursor:grab;
+  width: 5px;;
+}
+
+.edu-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.edu-input-group {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.exp-input-group {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+
+button:hover {
+  background-color: #2f00ff;
+}
+
+#education-section button,
+#experience-section button {
+  margin-top: 10px; /* Increase this if you want more space */
+}
+
+
+.resume-preview {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skills label {
+  margin-right: 15px;
+}
+
+progress {
+  width: 100%;
+  height: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  input, textarea, button {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 901px) {
+  body {
+    font-size: 18px;
+  }
+}
+
